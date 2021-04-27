@@ -10,7 +10,12 @@
 	display: block;
 	width: 100%;
 }
-
+@media screen and (min-width: 768px) {
+	.main-banner img {
+		height: 700px;
+		object-fit: cover;
+	}
+}
 .show-reel-video {
 	text-align: right;
 }
@@ -26,10 +31,40 @@
 	width: 70px;
 	height: auto;
 }
+@media screen and (min-width: 768px) {
+	.main-banner {
+		position: relative;
+	}
+	.your-bartender-container {
+		position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+	}
+	.your-bartender-container > div:first-child {
+		width: 50%;
+	}
+}
 
 
 .worry {
 	text-align: center;
+}
+@media screen and (min-width: 768px) {
+	.worry-container {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	.now-have > h2 {
+		width: 50%;
+		margin-left: auto;
+	}
 }
 
 .your-love-drink h3 {
@@ -40,8 +75,19 @@
 	overflow: hidden;
 }
 .make-drinks-10s video {
-	height: 250px;
-	object-position: -150px;
+	height: 95vw;
+	object-position: -52vw;
+}
+@media screen and (min-width: 576px) {
+	.make-drinks-10s video {
+		height: 480px;
+		object-position: -220px;
+	}
+}
+@media screen and (min-width: 992px) {
+	.make-drinks-10s video {
+		object-position: 0px;
+	}
 }
 .slogan {
 	text-align: center;
@@ -55,51 +101,92 @@
 .more-features-banner {
 	position: relative;
 }
-.more-features-banner > .banner {
+.more-features-banner-img {
 	width: 100%;
-	height: 192px;
+	height: 37vw;
 	object-fit: cover;
 }
-.more-features-banner > .machine {
-	height: 250px;
-	object-position: -40px;
+@media screen and (min-width: 768px) {
+	.more-features-banner-img {
+		height: 275px;
+	}
+}
+.more-features-banner-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	position: absolute;
+	top: -3rem;
 	left: 0;
-	top: -32px;
-}
-.more-features-banner > h2 {
-	position: absolute;
 	right: 0;
-	top: 50%;
-	transform: translate(0, -50%);
+	margin: auto;
 }
-.feature-card-header > img {
-	width: 100%;
-	height: 260px;
+@media screen and (min-width: 768px) {
+	.more-features-banner-container {
+		width: 768px;
+	}
+}
+.more-features-banner-machine {
+	width: 50%;
+	object-position: -40px;
+}
+.more-features-banner-container h2 {
+	width: 50%;
+}
+.feature-card-header {
+	text-align: center;
+}
+.feature-card-footer {
+	padding: 0 2rem;
+}
+.feature-card-header img {
+	height: 60vw;
+}
+@media screen and (min-width: 768px) {
+	.feature-card {
+		display: flex;
+		align-items: center;
+	}
+	.feature-card:nth-child(2n) > .feature-card-header {
+		order: 2;
+	}
+	.feature-card > div {
+		width: 50%;
+	}
+	.feature-card-header img {
+		width: 100%;
+		height: auto;
+	}
 }
 
 .any-place > h3 {
 	text-align: center;
 }
 
-.wanna-bartender > img {
-	width: 100%;
-	height: 192px;
-	object-fit: cover;
-}
+
 .wanna-bartender {
 	position: relative;
 }
-.wanna-bartender-text {
+.wanna-bartender > img {
+	width: 100%;
+	height: 37vw;
+	object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+	.wanna-bartender > img {
+		height: 275px;
+	}
+}
+.wanna-bartender-container {
 	text-align: center;
 	position: absolute;
 	left: 0;
 	right: 0;
 	margin: auto;
-	top: 55%;
-	transform: translate(0, -55%);
+	top: 50%;
+	transform: translate(0, -50%);
 }
-.wanna-bartender-text > a {
+.wanna-bartender-container > a {
 	margin: auto;
 }
 
@@ -107,11 +194,28 @@
 	width: 100%;
 	height: auto;
 }
-.for-you-text {
+.for-you-container {
 	text-align: center;
+	padding: 0 2rem;
 }
-.for-you-text > a {
+.for-you-container > a {
 	margin: auto;
+}
+@media screen and (min-width: 768px) {
+	.for-you {
+		display: flex;
+		align-items: center;
+	}
+	.for-you > img {
+		order: 2;
+		width: 50%;
+	}
+	.for-you-container {
+		text-align: left;
+	}
+	.for-you-container > a {
+		margin: 0;
+	}
 }
 
 footer {
@@ -143,4 +247,40 @@ footer > .logo {
 }
 .copy-right {
 	text-align: center;
+}
+@media screen and (min-width: 768px) {
+	footer {
+		padding-left: 2.25rem !important;
+		padding-right: 2.25rem !important;
+	}
+	footer > .logo {
+		text-align: left;
+	}
+	.footer-info-container {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 2.25rem;
+	}
+	.footer-nav {
+		order: 2;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		padding-bottom: 0;
+	}
+	.footer-nav > a:not(:last-child) {
+		padding-bottom: 0;
+		padding-right: 2rem;
+	}
+	.footer-nav > a {
+		margin-top: 1.625rem;
+	}
+	.footer-nav > a:last-child {
+		margin-top: 1rem;
+		margin-bottom: 0;
+	}
+	.company-info {
+		text-align: left;
+		padding-bottom: 0;
+	}
 }

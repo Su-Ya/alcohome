@@ -1,3 +1,9 @@
+/* 網站最大寬 */
+body, nav {
+	max-width: 1200px;
+	margin: auto;
+}
+
 /* 間距設定 */
 main {
 	margin-top: 56px;
