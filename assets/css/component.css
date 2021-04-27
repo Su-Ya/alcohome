@@ -1,0 +1,122 @@
+/* alcohomeme 風格按鈕 */
+.alcohome-button {
+	display: block;
+	width: 129px;
+	line-height: 44px;
+	text-align: center;
+	padding: 0px 30px;
+	border-radius: 22px;
+	cursor: pointer;
+}
+.alcohome-button-white {
+	border: 1px solid #fff;
+	color: #000;
+	background-color: #fff;
+	font-weight: bold;
+}
+.alcohome-button-white:hover {
+	color: #fff;
+	background-color: #000;
+	transition: 0.2s;
+}
+.alcohome-button-black {
+	border: 1px solid #fff;
+	color: #fff;
+	background-color: #000;
+	font-weight: bold;
+}
+.alcohome-button-black:hover {
+	color: #000;
+	background-color: #fff;
+	transition: 0.2s;
+}
+
+/* 字幕跑馬燈 */
+.marquee-wrapper {
+	width: 100%;
+	overflow: hidden;
+	animation: marquee 5s linear infinite;
+}
+@keyframes marquee {
+	0%   { text-indent: 90% }
+	100% { text-indent: -370% }
+}
+/* 控制 svg 大小 */
+.marquee-wrapper img {
+	transform: scale(.7);
+}
+/* 讓 animation 播放暫停 */
+.marquee-wrapper:hover {
+	animation-play-state: paused
+}
+
+/* 照片跑馬燈 */
+.marquee-card-wrap {
+	overflow: hidden;
+}
+.marquee-card-container{
+	width: 1200px;
+	animation: scroll 10s linear infinite;
+}
+@keyframes scroll{
+	0%   { transform: translateX(85vw); }
+	100% { transform: translateX(-1200px); }
+}
+/* 讓 animation 播放暫停 */
+.marquee-card-container:hover {
+	animation-play-state: paused
+}
+.marquee-card {
+	width: 150px;
+	margin: 0 1rem;
+	float: left;
+}
+.marquee-card-header {
+	width: 100%;
+  height: 150px * 1.25;
+}
+.marquee-card-header > img {
+	width: 100%;
+	object-fit: cover;
+}
+.marquee-card-footer {
+	padding: .5rem;
+	text-align: center;
+}
+
+/* 照片上下落差排列 */
+.place-wrap {
+	overflow: scroll;
+}
+.place-container {
+	width: 1420px;
+}
+.place-card {
+	position: relative;
+	width: 250px;
+	margin: 0 1rem;
+	float: left;
+}
+.place-card:nth-child(2n) {
+	margin-top: 70px;
+}
+.place-card > img {
+	width: 100%;
+	height: auto;
+}
+.place-card > h4 {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0,0,0,.7);
+}
+.place-card > h4:hover {
+	opacity: 1;
+}

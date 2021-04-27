@@ -1,0 +1,59 @@
+/* 間距設定 */
+main {
+	margin-top: 56px;
+	min-height: 90vh;
+}
+.gap-top-lg {
+	padding-top: 2.25rem;
+}
+.gap-bottom-lg {
+	padding-bottom: 2.25rem;
+}
+.gap-top-md {
+	padding-top: 1.5rem;
+}
+.gap-bottom-md {
+	padding-bottom: 1.5rem;
+}
+.gap-left-right-sm {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.gap-top-sm {
+	padding-top: 1rem;
+}
+.gap-bottom-sm {
+	padding-bottom: 1rem;
+}
+
+/* 內文字體設定 */
+.title-lg {
+	font-size: 2.875rem;
+	font-weight: 600;
+	line-height: 1.28;
+  letter-spacing: .28rem;
+  letter-spacing: .28rem;
+}
+.title-md {
+	font-size: 1.5rem; 
+	letter-spacing: 1.44px;
+}
+.title-sm {
+	font-size: 1.25rem;
+	font-weight: 600;
+	letter-spacing: 1.2px;
+}
+.title-base {
+	font-size: 1rem;
+	font-weight: 400;
+}
+.title-xsm {
+	font-size: .8rem;
+	font-weight: 200;
+}
+.article-text {
+	font-size: 1rem;
+	font-weight: 100;
+	line-height: 1.5;
+	letter-spacing: .1rem;
+}

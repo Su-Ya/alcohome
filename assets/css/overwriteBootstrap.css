@@ -1,0 +1,22 @@
+.navbar {
+	background-color: #000;
+}
+.navbar button {
+	padding: .25rem .75rem;
+	background-color: transparent;
+	border: none;
+}
+.nav-item:not(:last-child) .nav-link {
+	color: #fff;
+}
+.nav-item:not(:last-child) .nav-link {
+	padding: .5rem 2rem;
+}
+.nav-item:last-child .nav-link {
+	margin-left: .5rem;
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+		justify-content: flex-end;
+	}
+}
