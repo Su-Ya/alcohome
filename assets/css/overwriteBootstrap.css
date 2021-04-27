@@ -1,10 +1,11 @@
 .navbar {
 	background-color: #000;
 }
-.navbar button {
-	padding: .25rem .75rem;
-	background-color: transparent;
+.navbar .navbar-toggler {
 	border: none;
+}
+.navbar .navbar-toggler:focus {
+	box-shadow: 0 0 0 0;
 }
 .nav-item:not(:last-child) .nav-link {
 	color: #fff;
