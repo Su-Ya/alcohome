@@ -186,7 +186,7 @@
 	top: 50%;
 	transform: translate(0, -50%);
 }
-.wanna-bartender-container > a {
+.wanna-bartender-container > button {
 	margin: auto;
 }
 
@@ -231,10 +231,10 @@ footer > .logo {
 	flex-direction: column;
 	text-align: center;
 }
-.footer-nav > a:not(:last-child) {
+.footer-nav > a {
 	color: #fff;
 }
-.footer-nav > a:last-child {
+.footer-nav > button {
 	margin: auto;
 }
 .company-info {
@@ -268,14 +268,14 @@ footer > .logo {
 		align-items: flex-start;
 		padding-bottom: 0;
 	}
-	.footer-nav > a:not(:last-child) {
+	.footer-nav > a {
 		padding-bottom: 0;
 		padding-right: 2rem;
 	}
 	.footer-nav > a {
 		margin-top: 1.625rem;
 	}
-	.footer-nav > a:last-child {
+	.footer-nav > button {
 		margin-top: 1rem;
 		margin-bottom: 0;
 	}

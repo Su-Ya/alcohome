@@ -30,6 +30,15 @@
 	background-color: #fff;
 	transition: 0.2s;
 }
+.alcohome-form-button {
+	display: block;
+	width: 100%;
+	line-height: 44px;
+	text-align: center;
+	padding: 0px 30px;
+	border-radius: .25rem;
+	cursor: pointer;
+}
 
 /* 字幕跑馬燈 */
 .marquee-wrapper {
@@ -119,4 +128,31 @@
 }
 .place-card > h4:hover {
 	opacity: 1;
+}
+
+/* Modal form */
+.require::after {
+	content: '＊';
+	color: red;
+	font-size: .8rem;
+	font-weight: bold;
+}
+.field {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: .8rem;
+}
+.field label{
+	margin-bottom: .3rem;
+}
+.field input,.field textarea {
+	font-size: 1rem;
+	background-color: #141414;
+	padding: .5rem 1rem;
+	border-radius: .25rem;
+	outline: none;
+	border: none;
+}
+.fieldHidden {
+	display: none;
 }

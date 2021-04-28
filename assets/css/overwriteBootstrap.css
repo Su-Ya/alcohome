@@ -1,3 +1,4 @@
+/* navbar */
 .navbar {
 	background-color: #000;
 }
@@ -20,4 +21,52 @@
   .navbar-expand-lg .navbar-collapse {
 		justify-content: flex-end;
 	}
+}
+
+/* modal */
+.modal-content {
+	background-color: #000;
+	outline: 1px solid #fff;
+}
+.modal-header {
+	border-bottom: none;
+}
+.modal-header > button {
+	margin: 0;
+	color: #fff;
+	background-color: #000;
+	border: none;
+}
+.modal-footer {
+	border-top: none;
+}
+
+/* dropdown */
+.dropdown > button {
+	width: 100%;
+}
+.dropdown > ul {
+	width: 100%;
+}
+.dropdown .btn-secondary {
+	text-align: left;
+	font-size: 1rem;
+	background-color: #141414;
+	padding: .5rem 1rem;
+	outline: none;
+	border: none;
+}
+.dropdown {
+	position: relative;
+}
+.dropdown-toggle::after {
+	display: block;
+	position: absolute;
+	top: 1.25rem;
+	right: 1rem;
+	content: "";
+	border-top: .3em solid;
+	border-right: .3em solid transparent;
+	border-bottom: 0;
+	border-left: .3em solid transparent;
 }
