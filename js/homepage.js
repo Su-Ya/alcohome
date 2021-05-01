@@ -10,7 +10,7 @@ function createObserver() {
 			prevRatio = entry.intersectionRatio;
 			
 			//prevRatio = 1，表示 video 100% inviewport or visible
-			if (prevRatio > 0.6) {
+			if (prevRatio > 0.55) {
 				entry.target.play().catch(console.log);
 			}
 		});
