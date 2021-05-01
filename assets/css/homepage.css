@@ -82,18 +82,20 @@
 .make-drinks-10s {
 	overflow: hidden;
 }
-.make-drinks-10s video {
+#make-drinks-10s-video {
+	width: auto;
 	height: 95vw;
 	object-position: -52vw;
+	object-fit: cover;
 }
 @media screen and (min-width: 576px) {
-	.make-drinks-10s video {
+	#make-drinks-10s-video {
 		height: 480px;
 		object-position: -220px;
 	}
 }
 @media screen and (min-width: 992px) {
-	.make-drinks-10s video {
+	#make-drinks-10s-video {
 		object-position: 0px;
 	}
 }
