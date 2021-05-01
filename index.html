@@ -57,9 +57,22 @@
 	</nav>
 	<main class="gap-bottom-lg">
 		<section class="main-banner gap-bottom-lg">
-			<img src="./assets//images/home/banner-home-mobile.png" alt="alcohol frink on machine">
+			<div class="main-banner-video-container">
+				<video id="main-banner-video" muted="muted" loop>
+					<source src="./assets/videos/banner.mp4#t=50" type="video/mp4" />
+				</video>
+				<div class="show-reel-video gap-left-right-sm">
+					<span>SHOW REEL</span>
+					<img
+						class="show-reel-video-play-icon"
+						src="./assets/svg/icon_play.svg"
+						alt="play icon"
+						onclick="showReelVideoPlay()"
+					/>
+				</div>
+			</div>
 			<div class="your-bartender-container gap-left-right-sm">
-				<div class="gap-bottom-lg">
+				<div>
 					<h2 class="title-lg gap-bottom-sm">你的<br/>專屬調酒師</h2>
 					<p class="article-text">歐洲設計與製造，榮獲英國產品創新獎入圍。ALCOHOME 智能調飲機為你打造最得力的助手。一鍵完成，經典調酒就在彈指之間。</p>
 					<button
@@ -68,10 +81,6 @@
 						data-bs-toggle="modal"
 						data-bs-target="#modalForm"
 					>預約體驗</button>
-				</div>
-				<div class="show-reel-video gap-left-right-sm">
-					<span>SHOW REEL</span>
-					<img src="./assets/svg/icon_play.svg" alt="">
 				</div>
 			</div>
 		</section>
@@ -153,7 +162,7 @@
 				</div>
 			</div>
 			<div class="make-drinks-10s">
-				<video muted="muted" autoplay="true" class="make-drinks-10s-video gap-bottom-lg">
+				<video muted="muted" autoplay="true" id="make-drinks-10s-video" class="gap-bottom-lg">
 					<source src="./assets/videos/bartending10s.mp4" type="video/mp4" />
 				</video>
 				<div class="slogan gap-left-right-sm">
@@ -168,16 +177,16 @@
 		</section>
 		<section class="more-features gap-bottom-lg">
 			<div class="more-features-banner gap-bottom-lg">
-				<img class="more-features-banner-img" src="./assets/images/home/banner_1@2x.png" alt="">
+				<img class="more-features-banner-img" src="./assets/images/home/banner_1@2x.png" alt="banner 1">
 				<div class="more-features-banner-container">
-					<img class="more-features-banner-machine" src="./assets/images/home/machine_DSCF8045@2x.png" alt="">
+					<img class="more-features-banner-machine" src="./assets/images/home/machine_DSCF8045@2x.png" alt="machine">
 					<h2 class="title-lg">更多優勢</h2>
 				</div>
 			</div>
 			<div class="features gap-top-lg gap-left-right-sm">
 				<div class="feature-card gap-bottom-lg">
 					<div class="feature-card-header">
-						<img src="./assets/images/home/feature_1@2x.png" alt="">
+						<img src="./assets/images/home/feature_1@2x.png" alt="machine pad">
 					</div>
 					<div class="feature-card-footer">
 						<h3 class="title-md">操作簡單 一鍵完成</h3>
@@ -186,7 +195,7 @@
 				</div>
 				<div class="feature-card gap-bottom-lg">
 					<div class="feature-card-header">
-						<img src="./assets/images/home/feature_2@2x.png" alt="">
+						<img src="./assets/images/home/feature_2@2x.png" alt="machine pad">
 					</div>
 					<div class="feature-card-footer">
 						<h3 class="title-md">自定義各式調飲</h3>
@@ -195,7 +204,7 @@
 				</div>
 				<div class="feature-card gap-bottom-lg">
 					<div class="feature-card-header">
-						<img src="./assets/images/home/feature_3@2x.png" alt="">
+						<img src="./assets/images/home/feature_3@2x.png" alt="machine pad">
 					</div>
 					<div class="feature-card-footer">
 						<h3 class="title-md">精準高品質</h3>
@@ -204,7 +213,7 @@
 				</div>
 				<div class="feature-card gap-bottom-lg">
 					<div class="feature-card-header">
-						<img src="./assets/svg/border_machine.svg" alt="">
+						<img src="./assets/svg/border_machine.svg" alt="machine pad">
 					</div>
 					<div class="feature-card-footer">
 						<h3 class="title-md">管線自動清洗</h3>
@@ -213,7 +222,7 @@
 				</div>
 				<div class="feature-card gap-bottom-lg">
 					<div class="feature-card-header">
-						<img src="./assets/images/home/feature_5@2x.png" alt="">
+						<img src="./assets/images/home/feature_5@2x.png" alt="machine pad">
 					</div>
 					<div class="feature-card-footer">
 						<h3 class="title-md">極簡美學</h3>
@@ -222,7 +231,7 @@
 				</div>
 				<div class="feature-card gap-bottom-lg">
 					<div class="feature-card-header">
-						<img src="./assets/images/home/feature_6@2x.png" alt="">
+						<img src="./assets/images/home/feature_6@2x.png" alt="machine pad">
 					</div>
 					<div class="feature-card-footer">
 						<h3 class="title-md">雲端數據管理幫手</h3>
@@ -235,25 +244,25 @@
 				<div class="place-wrap">
 					<div class="place-container">
 						<div class="place-card">
-							<img src="./assets/images/home/place_1@2x.png" alt="">
+							<img src="./assets/images/home/place_1@2x.png" alt="restaurant">
 							<h4 class="article-text">
 								<span>行政酒廊 尊榮升級</span>
 							</h4>
 						</div>
 						<div class="place-card">
-							<img src="./assets/images/home/place_2@2x.png" alt="">
+							<img src="./assets/images/home/place_2@2x.png" alt="restaurant">
 							<h4 class="article-text">
 								<span>商務辦公 全新享受</span>
 							</h4>
 						</div>
 						<div class="place-card">
-							<img src="./assets/images/home/place_3@2x.png" alt="">
+							<img src="./assets/images/home/place_3@2x.png" alt="restaurant">
 							<h4 class="article-text">
 								<span>品牌概念店 頂級尊貴</span>
 							</h4>
 						</div>
 						<div class="place-card">
-							<img src="./assets/images/home/place_4@2x.png" alt="">
+							<img src="./assets/images/home/place_4@2x.png" alt="restaurant">
 							<h4 class="article-text">
 								<span>宴會活動 賓客盡興</span>
 							</h4>
@@ -273,7 +282,7 @@
 		</section>
 		<section class="gap-left-right-sm">
 			<div class="wanna-bartender gap-bottom-lg">
-				<img src="./assets/images/home/banner_2@2x.png" alt="">
+				<img src="./assets/images/home/banner_2@2x.png" alt="banner">
 				<div class="wanna-bartender-container">
 					<h3 class="title-md">你也想擁有專屬調酒師嗎？</h3>
 					<button
@@ -285,7 +294,7 @@
 				</div>
 			</div>
 			<div class="for-you">
-				<img class="gap-bottom-lg" src="./assets/svg/border_ counter.svg" alt="">
+				<img class="gap-bottom-lg" src="./assets/svg/border_ counter.svg" alt="counter">
 				<div class="for-you-container">
 					<h3 class="title-md">讓ALCOHOME為你調一杯</h3>
 					<h4 class="article-text">現在只要用XXX，就能夠喝到 ALCOHOME的調酒噢！</h4>
@@ -314,7 +323,7 @@
 				<h5 class="title-xsm">台北市信義區</h5>
 				<a class="title-xsm" href="+88692283102">092283102</a>
 				<h5 class="title-xsm">kinf04182@gmail.com</h5>
-				<a class="title-xsm"><img src="./assets/svg/icon_line.svg" alt=""></a>
+				<a class="title-xsm"><img src="./assets/svg/icon_line.svg" alt="icon line"></a>
 			</div>
 		</div>
 		<div class="copy-right title-xsm">2021 © All Rights Reserved</div>

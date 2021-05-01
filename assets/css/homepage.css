@@ -6,15 +6,25 @@
 }
 
 /* 各區樣式 */
-.main-banner img {
-	display: block;
+#main-banner-video { 
 	width: 100%;
 }
-@media screen and (min-width: 768px) {
-	.main-banner img {
-		height: 700px;
-		object-fit: cover;
-	}
+.main-banner-video-container {
+	position: relative;
+}
+.show-reel-video {
+	position: absolute;
+	right: 1rem;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+.show-reel-video-play-icon {
+	cursor: pointer;
+	border-radius: 50%;
+}
+.show-reel-video-play-icon:hover {
+	background-color: rgba(0,0,0,.8);
+	transition: 0.2s;
 }
 .show-reel-video {
 	text-align: right;
@@ -25,7 +35,7 @@
 	margin-right: 1rem;
 	vertical-align: middle;
 }
-.show-reel-video > img {
+.show-reel-video-play-icon {
 	display: inline-block;
 	vertical-align: middle;
 	width: 70px;
@@ -36,15 +46,13 @@
 		position: relative;
 	}
 	.your-bartender-container {
+		width: 50%;
 		position: absolute;
     top: 50%;
     transform: translate(0, -50%);
     display: flex;
     justify-content: space-around;
     align-items: center;
-	}
-	.your-bartender-container > div:first-child {
-		width: 50%;
 	}
 }
 

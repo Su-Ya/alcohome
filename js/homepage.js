@@ -16,7 +16,7 @@ function createObserver() {
 		});
 
 	}, options);
-	const video = document.querySelector('.make-drinks-10s-video')
+	const video = document.querySelector('#make-drinks-10s-video')
 	observer.observe(video);   
 }
 
@@ -112,4 +112,9 @@ function submmitReservationForm(postForm) {
 var myModal = new bootstrap.Modal(document.getElementById('modalForm'))
 function modalFormHiden() {
 	myModal.hide();
+}
+
+function showReelVideoPlay() {
+	const video = document.querySelector("#main-banner-video");
+	video.play();
 }
