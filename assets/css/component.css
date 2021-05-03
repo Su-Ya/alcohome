@@ -48,42 +48,32 @@
 	width: 90%;
 }
 
-/* 照片跑馬燈 */
-.marquee-card-wrap {
-	overflow: hidden;
+/* 酒單輪播 */
+.your-love-drink .slick-arrow.slick-prev {
+	left: 30px;
+	z-index: 99;
+	top: 45%;
+	transform: translate(0, -45%);
 }
-.marquee-card-container{
-	width: 1200px;
-	animation: scroll 10s linear infinite;
+.your-love-drink .slick-arrow.slick-next {
+	right: 30px;
+	z-index: 99;
+	top: 45%;
+	transform: translate(0, -45%);
 }
-@keyframes scroll{
-	0%   { transform: translateX(85vw); }
-	100% { transform: translateX(-1200px); }
-}
-/* 讓 animation 播放暫停 */
-.marquee-card-container:hover {
-	animation-play-state: paused
-}
-.marquee-card {
-	width: 150px;
-	margin: 0 1rem;
-	float: left;
-}
-.marquee-card-header {
-	width: 100%;
-  height: 150px * 1.25;
-}
-.marquee-card-header > img {
-	width: 100%;
+.drinks-card-header > img {
+	display: block;
+	margin: auto;
+	width: 85%;
 	object-fit: cover;
 }
-.marquee-card-footer {
+.drinks-card-footer {
 	padding: .5rem;
 	text-align: center;
 }
 
 
-/* 照片上下落差排列 */
+/* 使用地點輪播，照片上下落差排列 */
 .any-place .slick-arrow.slick-prev {
 	left: 30px;
 	z-index: 99;
