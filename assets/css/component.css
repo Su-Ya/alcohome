@@ -95,7 +95,10 @@
 
 /* 照片上下落差排列 */
 .place-wrap {
-	overflow: scroll;
+	overflow-x: scroll;
+}
+.place-wrap::-webkit-scrollbar {
+  display: none;
 }
 .place-container {
 	width: 1420px;
