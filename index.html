@@ -25,11 +25,17 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 	
-	<!-- jquery -->
-	<script defer src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==' crossorigin='anonymous'></script>
+	<!-- slick slider -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha512-bnIvzh6FU75ZKxp0GXLH9bewza/OIw6dLVh9ICg0gogclmYGguQJWl8U30WpbsGTqbIiAwxTsbe76DErLq5EDQ==" crossorigin="anonymous"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous"></script>
+	
 	<!-- my -->
 	<link rel="stylesheet" href="./assets/css/index.css">
 	<script defer src="./js/homepage.js"></script>
+	<script defer src="./js/slickSlider.js"></script>
+	
 </head>
 <body>
 	<nav class="navbar fixed-top navbar-expand-lg">
@@ -254,36 +260,44 @@
 			</div>
 			<div class="any-place gap-bottom-lg">
 				<h3 class="title-md">適用於任何場合</h3>
-				<div class="place-wrap">
-					<div class="place-container clearfix">
+				<div class="slick">
+					<div>
 						<div class="place-card">
-							<img src="./assets/images/home/place_1@2x.png" alt="restaurant">
+							<img src="./assets/images/home/place_5@2x.png" alt="">
 							<h4 class="article-text">
-								<span>行政酒廊 尊榮升級</span>
+								<span>貴賓室 奢華體驗</span>
 							</h4>
 						</div>
-						<div class="place-card">
-							<img src="./assets/images/home/place_2@2x.png" alt="restaurant">
-							<h4 class="article-text">
-								<span>商務辦公 全新享受</span>
-							</h4>
-						</div>
+					</div>
+					<div>
 						<div class="place-card">
 							<img src="./assets/images/home/place_3@2x.png" alt="restaurant">
 							<h4 class="article-text">
 								<span>品牌概念店 頂級尊貴</span>
 							</h4>
 						</div>
+					</div>
+					<div>
+						<div class="place-card">
+							<img src="./assets/images/home/place_1@2x.png" alt="restaurant">
+							<h4 class="article-text">
+								<span>行政酒廊 尊榮升級</span>
+							</h4>
+						</div>
+					</div>
+					<div>
+						<div class="place-card">
+							<img src="./assets/images/home/place_2@2x.png" alt="restaurant">
+							<h4 class="article-text">
+								<span>商務辦公 全新享受</span>
+							</h4>
+						</div>
+					</div>
+					<div>
 						<div class="place-card">
 							<img src="./assets/images/home/place_4@2x.png" alt="restaurant">
 							<h4 class="article-text">
 								<span>宴會活動 賓客盡興</span>
-							</h4>
-						</div>
-						<div class="place-card">
-							<img src="./assets/images/home/place_5@2x.png" alt="">
-							<h4 class="article-text">
-								<span>機場貴賓室 奢華體驗</span>
 							</h4>
 						</div>
 					</div>
@@ -311,7 +325,6 @@
 				<div class="for-you-container">
 					<h3 class="title-md">讓ALCOHOME為你調一杯</h3>
 					<h4 class="article-text">現在只要預約體驗，就能夠喝到ALCOHOME的調酒噢！</h4>
-					<!-- <a class="alcohome-button alcohome-button-black">馬上前往</a> -->
 					<button
 						class="alcohome-button alcohome-button-black"
 						type="button"
