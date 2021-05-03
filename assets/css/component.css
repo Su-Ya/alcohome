@@ -40,23 +40,12 @@
 	cursor: pointer;
 }
 
-/* 字幕跑馬燈 */
-.marquee-wrapper {
-	width: 100%;
-	overflow: hidden;
-	animation: marquee 5s linear infinite;
-}
-@keyframes marquee {
-	0%   { text-indent: 90% }
-	100% { text-indent: -370% }
-}
-/* 控制 svg 大小 */
-.marquee-wrapper img {
-	transform: scale(.7);
-}
-/* 讓 animation 播放暫停 */
-.marquee-wrapper:hover {
-	animation-play-state: paused
+
+/* border 描邊文字 */
+.border-text img {
+	display: block;
+	margin: auto;
+	width: 90%;
 }
 
 /* 照片跑馬燈 */
