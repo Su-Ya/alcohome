@@ -184,6 +184,10 @@
 		height: auto;
 	}
 }
+.accreditation-container > img {
+	width: auto;
+	height: 65px;
+}
 
 .any-place > h3 {
 	text-align: center;
