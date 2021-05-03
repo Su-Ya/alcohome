@@ -1,5 +1,7 @@
+/**********************************************************
+	make drinks 10s video
+**********************************************************/
 window.addEventListener("scroll", createObserver, false);
-
 function createObserver() {
 	const options = {
 		threshold: 1
@@ -21,7 +23,18 @@ function createObserver() {
 	observer.observe(video);   
 }
 
-// set selected value
+/**********************************************************
+	main banner video
+**********************************************************/
+function showReelVideoPlay() {
+	const video = document.querySelector("#main-banner-video");
+	video.currentTime = 0;
+	video.play();
+}
+
+/**********************************************************
+	set selected value in department
+**********************************************************/
 document.querySelector(".dropdown-menu-department").addEventListener('click',(event)=>{
 	const selected = event.target.textContent;
 	const dropdownButton = document.querySelector("#dropdownMenuDepartmentButton");
@@ -44,6 +57,9 @@ document.querySelector(".dropdown-menu-whereToKnow").addEventListener('click',(e
 	dropdownButton.textContent = selected
 })
 
+/**********************************************************
+	Form submit
+**********************************************************/
 function initReservationForm() {
 	return {
 		name: null,
@@ -54,7 +70,6 @@ function initReservationForm() {
 		contents: null
 	}
 }
-
 function verifyForm() {
 	let postForm = initReservationForm();
 	
@@ -113,10 +128,4 @@ function submmitReservationForm(postForm) {
 var myModal = new bootstrap.Modal(document.getElementById('modalForm'))
 function modalFormHiden() {
 	myModal.hide();
-}
-
-function showReelVideoPlay() {
-	const video = document.querySelector("#main-banner-video");
-	video.currentTime = 0;
-	video.play();
 }
