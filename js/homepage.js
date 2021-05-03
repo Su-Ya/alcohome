@@ -31,6 +31,20 @@ function showReelVideoPlay() {
 	video.currentTime = 0;
 	video.play();
 }
+window.onload = function(){
+	const video = document.querySelector('#main-banner-video');
+	video.addEventListener("timeupdate", hideBannerInfo ,false);
+}
+	
+function hideBannerInfo(){
+	const bannerInfo = document.querySelector('.your-bartender-container');
+	if(this.currentTime > 22.5 && this.currentTime < 22.85) {
+		bannerInfo.classList.add('hideBannerInfo');
+	}
+	else if(this.currentTime <= 0.2){
+		bannerInfo.classList.remove('hideBannerInfo');
+	}
+}
 
 /**********************************************************
 	set selected value in department
