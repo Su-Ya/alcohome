@@ -86,7 +86,7 @@
 	display: block;
 	margin: auto;
 	width: 90%;
-	height: 295px;
+	height: 400px;
 	object-fit: cover;
 }
 .any-place .slick-slide:nth-child(2n) .place-card {
