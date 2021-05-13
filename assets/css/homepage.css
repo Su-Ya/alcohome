@@ -1,4 +1,8 @@
 /* 各區樣式 */
+* {
+	color: #fff;
+}
+
 #main-banner-video { 
 	width: 100%;
 }
