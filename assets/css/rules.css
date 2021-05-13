@@ -73,3 +73,10 @@ main {
 .clearfix:after {
   clear: both;
 }
+
+/* 為了 SEO */
+.logo-text {
+	position: absolute;
+	opacity: 0;
+	z-index: -99;
+}
