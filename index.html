@@ -35,9 +35,11 @@
 	<link rel="stylesheet" href="./assets/css/index.css">
 	<script defer src="./js/homepage.js"></script>
 	<script defer src="./js/slickSlider.js"></script>
-	
 </head>
 <body>
+	<section class="loading-container">
+		<img class="loading-gif" src="./assets/images/loading.gif" alt="loading">
+	</section>
 	<nav class="navbar fixed-top navbar-expand-lg">
 		<div class="container-fluid">
 			<h1 class="logo-text">ALCOHOME</h1>
@@ -72,7 +74,8 @@
 			</div>
 		</div>
 	</nav>
-	<main class="gap-bottom-lg">
+	<!-- main hide for stop video playing when loading -->
+	<main class="gap-bottom-lg hide">
 		<section class="main-banner gap-bottom-lg">
 			<div class="main-banner-video-container">
 				<video muted playsinline autoplay loop id="main-banner-video">

@@ -1,3 +1,32 @@
+/* loading */
+.loading-container {
+  display: block;
+  position: fixed;
+  top: 0;
+	bottom: 0;
+  left: 0;
+	right: 0;
+  z-index: 999999;
+	background-color: #000;
+}
+.loading-gif {
+	display: block;
+	margin: auto;
+	width: 90%;
+}
+.hideLoading {
+	opacity: 0;
+	transition: .5s;
+}
+.hide {
+	display: none;
+}
+@media screen and (min-width: 576px) {
+	.loading-gif {
+		width: 50%;
+	}
+}
+
 /* alcohomeme 風格按鈕 */
 .alcohome-button {
 	display: block;
