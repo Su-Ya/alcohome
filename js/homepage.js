@@ -1,4 +1,17 @@
 /**********************************************************
+	loading
+**********************************************************/
+window.addEventListener('load', (event) => {
+	setTimeout(() => {
+		var loading = document.querySelector('.loading-container');
+		loading.classList.add('hideLoading');
+		loading.style.zIndex = -1;
+		var main = document.querySelector('main');
+		main.classList.remove('hide');
+	}, 5000);
+});
+
+/**********************************************************
 	make drinks 10s video
 **********************************************************/
 window.addEventListener("scroll", createObserver, false);
@@ -38,11 +51,14 @@ window.onload = function(){
 	
 function hideBannerInfo(){
 	const bannerInfo = document.querySelector('.your-bartender-container');
+	const playIcon = document.querySelector('.show-reel-video');
 	if(this.currentTime > 22.5 && this.currentTime < 22.85) {
 		bannerInfo.classList.add('hideBannerInfo');
+		playIcon.classList.add('hideBannerInfo');
 	}
 	else if(this.currentTime <= 0.2){
 		bannerInfo.classList.remove('hideBannerInfo');
+		playIcon.classList.remove('hideBannerInfo');
 	}
 }
 
