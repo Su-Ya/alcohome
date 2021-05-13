@@ -54,6 +54,10 @@
     justify-content: space-around;
     align-items: center;
 	}
+	/*************************************************************
+		在影片第 n 秒會用 js 加上 class hideBannerInfo 隱藏 Banner 文字，
+		但手機版不能隱藏文字，所以讓這個 class 只在 768px 以上有效
+	*************************************************************/
 	.hideBannerInfo {
 		display: none;
 	}
