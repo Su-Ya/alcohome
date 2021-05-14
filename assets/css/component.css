@@ -150,13 +150,13 @@ footer > .logo {
 .footer-nav > button {
 	margin: auto;
 }
-.company-info > a {
+.icon-line {
 	display: block;
 	margin: 0 auto;
 	width: 50px;
 	height: 50px;
 }
-.company-info img {
+.icon-line img {
 	width: 100%;
 	color: #fff;
 }
@@ -195,7 +195,6 @@ footer > .logo {
 		margin-bottom: 0;
 	}
 	.company-info {
-		text-align: left;
 		padding-bottom: 0;
 	}
 }
@@ -225,4 +224,7 @@ footer > .logo {
 }
 .fieldHidden {
 	display: none;
+}
+.modal-line.icon-line {
+	margin: 0;
 }

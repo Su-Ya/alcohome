@@ -87,24 +87,37 @@
 	overflow: hidden;
 }
 #make-drinks-10s-video {
-	width: auto;
-	height: 95vw;
-	object-position: -52vw;
+	width: 100%;
+	height: 54vw;
+	object-position: -11vw;
+	/* height: 200px; */
+	/* object-position: -35px; */
 	object-fit: cover;
 }
 @media screen and (min-width: 576px) {
 	#make-drinks-10s-video {
-		height: 480px;
-		object-position: -220px;
+		object-position: -15vw;
+		/* height: 312px; */
+		/* object-position: -102px; */
+	}
+}
+@media screen and (min-width: 768px) {
+	#make-drinks-10s-video {
+		object-position: -17vw;
 	}
 }
 @media screen and (min-width: 992px) {
 	#make-drinks-10s-video {
-		object-position: 0px;
+		height: 517px;
+		object-position: -160px;
 	}
 }
 .slogan {
 	text-align: center;
+}
+.slogan > * {
+	font-size: 17px;
+	letter-spacing: 1.44px;
 }
 
 .more-features-banner {
@@ -125,7 +138,7 @@
 	align-items: center;
 	justify-content: center;
 	position: absolute;
-	top: -2rem;
+	top: -23px;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -143,12 +156,16 @@
 	object-position: -40px;
 }
 @media screen and (min-width: 576px) {
+	.more-features-banner-info {
+		top: -27px;
+	}
 	.more-features-banner-info h2 {
 		text-align: center;
 	}
 }
 @media screen and (min-width: 768px) {
 	.more-features-banner-info {
+		top: -45px;
 		width: 768px;
 	}
 	.more-features-banner-machine img {
