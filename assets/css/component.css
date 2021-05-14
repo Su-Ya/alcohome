@@ -31,7 +31,7 @@
 .alcohome-button {
 	display: block;
 	width: 129px;
-	line-height: 44px;
+	line-height: 42px;
 	text-align: center;
 	padding: 0px 30px;
 	border-radius: 22px;
@@ -62,7 +62,7 @@
 .alcohome-form-button {
 	display: block;
 	width: 100%;
-	line-height: 44px;
+	line-height: 42px;
 	text-align: center;
 	padding: 0px 30px;
 	border-radius: .25rem;
