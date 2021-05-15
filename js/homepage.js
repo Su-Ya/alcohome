@@ -8,8 +8,8 @@ window.addEventListener('load', (event) => {
 		loading.style.zIndex = -1;
 		var main = document.querySelector('main');
 		main.classList.remove('hide');
-	// }, 5000);
-	}, 100);
+	}, 5000);
+	// }, 100);
 });
 
 /**********************************************************

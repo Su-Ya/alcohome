@@ -1,6 +1,6 @@
 /* 網站最大寬 */
 body, nav {
-	max-width: 1200px;
+	max-width: 1440px;
 	margin: auto;
 }
 
@@ -62,6 +62,26 @@ main {
 	font-weight: 300;
 	line-height: 1.5;
 	letter-spacing: .1rem;
+}
+@media screen and (min-width: 1200px) {
+	.title-lg {
+		font-size: 3.75rem;
+	}
+	.title-md {
+		font-size: 40px; 
+	}
+	.title-sm {
+		font-size: 24px;
+	}
+	.title-base {
+		font-size: 20px;
+	}
+	.title-xsm {
+		font-size: 17px;
+	}
+	.article-text {
+		font-size: 20px;
+	}
 }
 
 /* 清除 float */

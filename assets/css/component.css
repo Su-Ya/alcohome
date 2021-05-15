@@ -78,6 +78,14 @@
 	margin: auto;
 	width: 90%;
 }
+@media screen and (min-width: 1200px) {
+	.border-text {
+		padding-bottom: 100px;
+	}
+	.border-text img {
+		width: 98%;
+	}
+}
 
 /* 酒單輪播 */
 .your-love-drink .slick-arrow.slick-prev {

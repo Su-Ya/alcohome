@@ -24,11 +24,11 @@
 }
 
 /* modal */
+#modalForm {
+	background-color: rgba(0,0,0, .5);
+}
 .modal-content {
 	background-color: #000;
-}
-.modal-dialog {
-	margin: 0;
 }
 .modal-header {
 	border-bottom: none;
@@ -41,13 +41,6 @@
 }
 .modal-footer {
 	border-top: none;
-}
-@media screen and (min-width: 576px) {
-	.modal-dialog {
-		width: 100%;
-		max-width: 100%;
-	}
-
 }
 
 /* dropdown */
