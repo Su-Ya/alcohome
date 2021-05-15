@@ -8,7 +8,8 @@ window.addEventListener('load', (event) => {
 		loading.style.zIndex = -1;
 		var main = document.querySelector('main');
 		main.classList.remove('hide');
-	}, 5000);
+	// }, 5000);
+	}, 100);
 });
 
 /**********************************************************
@@ -51,41 +52,13 @@ window.onload = function(){
 	
 function hideBannerInfo(){
 	const bannerInfo = document.querySelector('.your-bartender-container');
-	const playIcon = document.querySelector('.show-reel-video');
 	if(this.currentTime > 22.5 && this.currentTime < 22.85) {
 		bannerInfo.classList.add('hideBannerInfo');
-		playIcon.classList.add('hideBannerInfo');
 	}
 	else if(this.currentTime <= 0.2){
 		bannerInfo.classList.remove('hideBannerInfo');
-		playIcon.classList.remove('hideBannerInfo');
 	}
 }
-
-/**********************************************************
-	set selected value in department
-**********************************************************/
-document.querySelector(".dropdown-menu-department").addEventListener('click',(event)=>{
-	const selected = event.target.textContent;
-	const dropdownButton = document.querySelector("#dropdownMenuDepartmentButton");
-	dropdownButton.textContent = selected
-
-	//若代表單位選「公司」，顯示「公司名稱」、「公司地址」欄位
-	const fieldCompanyName = document.querySelector(".companyName");
-	const fieldCompanyAddress = document.querySelector(".companyAddress");
-	if(selected === "公司") {
-		fieldCompanyName.classList.remove('fieldHidden')
-		fieldCompanyAddress.classList.remove('fieldHidden')
-	}else {
-		fieldCompanyName.classList.add('fieldHidden')
-		fieldCompanyAddress.classList.add('fieldHidden')
-	}
-})
-document.querySelector(".dropdown-menu-whereToKnow").addEventListener('click',(event)=>{
-	const selected = event.target.textContent;
-	const dropdownButton = document.querySelector("#dropdownMenuWhereToKnowButton");
-	dropdownButton.textContent = selected
-})
 
 /**********************************************************
 	Form submit
@@ -93,10 +66,10 @@ document.querySelector(".dropdown-menu-whereToKnow").addEventListener('click',(e
 function initReservationForm() {
 	return {
 		name: null,
-		department: "個人",
+		companyName: null,
+		taxIdNumber: null,
 		phone: null,
 		email: null,
-		whereToKnow: "粉絲專頁",
 		contents: null
 	}
 }
@@ -107,19 +80,11 @@ function verifyForm() {
 	postForm = {
 		...postForm,
 		name: form.name.value,
-		department: form.department.textContent.trim(),
+		companyName: form.companyName.value,
+		taxIdNumber: form.taxIdNumber.value,
 		phone: form.phone.value,
 		email: form.email.value,
-		whereToKnow: form.whereToKnow.textContent.trim(),
 		contents: form.contents.value
-	}
-
-	if( postForm.department === "公司") {
-		postForm = {
-			...postForm,
-			companyName: form.companyName.value,
-			companyAddress: form.companyAddress.value
-		}
 	}
 
 	const hasEmpty = Object.keys(postForm).some(key => postForm[key] == null || postForm[key] === "")
@@ -147,7 +112,7 @@ function submmitReservationForm(postForm) {
 		return i;
 	}
 
-	const url = "https://script.google.com/macros/s/AKfycbwp5u1sUmGwN0wa_cmPB2gtcy69-5rN1Y9dMwo0_9XvMfRcY_0otRcr7Q6JYC8DiI5G/exec"
+	const url = "https://script.google.com/macros/s/AKfycbzNTRqUFN00-Y_zzX1bDaBs6_GDjPj6T80GFVKwvjn6-BKMXmPg1yshoihAfw0ucnMW/exec"
 	$.get(url, {
 		...postForm,
 		'timeStamp': timeStamp
