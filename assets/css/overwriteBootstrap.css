@@ -26,6 +26,10 @@
 /* modal */
 #modalForm {
 	background-color: rgba(0,0,0, .5);
+	color: #fff;
+}
+#modalForm input, #modalForm textarea {
+	color: #fff;
 }
 .modal-content {
 	background-color: #000;
