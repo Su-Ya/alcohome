@@ -11,8 +11,12 @@
 }
 .loading-gif {
 	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	margin: auto;
-	/* 置中 */
 	width: 60%;
 }
 .hideLoading {
@@ -148,6 +152,9 @@ footer > .logo {
 	display: block;
 	margin-bottom: 2.25rem;
 	text-align: center;
+}
+.company-info, .copy-right {
+	color: #fff;
 }
 .company-info, .footer-nav {
 	padding-bottom: 2.25rem;
