@@ -1,0 +1,113 @@
+/* 各區樣式 */
+h2, h3 {
+	margin: 0;
+	color: #fff;
+	font-weight: 400;
+}
+h2 {
+	font-size: 20px;
+}
+h3 {
+	font-size: 1rem;
+}
+@media screen and (min-width: 992px) {
+	h2 {
+		font-size: 1.5rem;
+	}
+}
+
+main {
+	padding: 16px 1rem 36px;
+}
+@media screen and (min-width: 576px) {
+	main {
+		padding: 16px 10% 36px;
+	}
+}
+@media screen and (min-width: 768px) {
+	main {
+		padding: 16px 24px 36px;
+	}
+}
+@media screen and (min-width: 992px) {
+	main {
+		padding: 16px 10% 36px;
+	}
+}
+@media screen and (min-width: 1220px) {
+	main {
+		padding: 34px 120px 63px;
+	}
+}
+main > section > h2 {
+	border-bottom: 1px solid #fff;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+}
+@media screen and (min-width: 992px) {
+	main > section > h2 {
+		border-bottom: 1px solid #fff;
+		padding-bottom: 1.2rem;
+		margin-bottom: 2rem;
+	}
+}
+main > section:nth-of-type(1) {
+	padding-bottom: 36px;
+}
+@media screen and (min-width: 992px) {
+	main > section:nth-of-type(1) {
+		padding-bottom: 80px;
+	}
+}
+.spece-container > .machine {
+	padding-bottom: 30px;
+}
+.machine > img {
+	width: 100%;
+	max-width: 481px;
+	display: block;
+	margin: auto;
+}
+.spece > div {
+	display: flex;
+	align-items: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 1rem;
+}
+.spece > div > h3:nth-child(1) {
+	width: 50%;
+}
+.spece .build-in > h3 {
+	padding-bottom: 4px;
+}
+@media screen and (min-width: 768px) {
+	.spece-container {
+		display: flex;
+	}
+	.spece-container > .machine {
+		width: 50%;
+	}
+	.spece-container > .spece {
+		width: 50%;
+	}
+	.spece-container > .machine {
+		padding-bottom: 0px;
+	}
+	.machine > img {
+		margin: 0;
+		margin-right: auto;
+		width: 90%;
+		max-width: 410px;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+@media screen and (min-width: 1220px) {
+	.spece-container > .machine {
+		width: 45%;
+	}
+	.spece-container > .spece {
+		width: 55%;
+	}
+}
