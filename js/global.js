@@ -15,22 +15,9 @@ window.addEventListener('load', (event) => {
 /**********************************************************
 	Form submit
 **********************************************************/
-function initReservationForm() {
-	return {
-		name: null,
-		companyName: null,
-		taxIdNumber: null,
-		phone: null,
-		email: null,
-		contents: null
-	}
-}
 function verifyForm() {
-	let postForm = initReservationForm();
-	
 	const form = document.reservation;
-	postForm = {
-		...postForm,
+	const postForm = {
 		name: form.name.value,
 		phone: form.phone.value,
 		email: form.email.value,
