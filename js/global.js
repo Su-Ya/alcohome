@@ -8,7 +8,7 @@ window.addEventListener('load', (event) => {
 		loading.style.zIndex = -1;
 		var main = document.querySelector('main');
 		main.classList.remove('hide');
-	}, 5000);
+	}, 3000);
 	// }, 100);
 });
 
@@ -32,19 +32,21 @@ function verifyForm() {
 	postForm = {
 		...postForm,
 		name: form.name.value,
-		companyName: form.companyName.value,
-		taxIdNumber: form.taxIdNumber.value,
 		phone: form.phone.value,
 		email: form.email.value,
 		contents: form.contents.value
 	}
-
 	const hasEmpty = Object.keys(postForm).some(key => postForm[key] == null || postForm[key] === "")
 	if( hasEmpty ) {
 		alert('必填欄位不能為空');
 		return;
 	}
-	submmitReservationForm(postForm);
+	submmitReservationForm({
+		...postForm,
+		// 下面是非必填欄位，不用檢查空值
+		companyName: form.companyName.value,
+		taxIdNumber: form.taxIdNumber.value,
+	});
 }
 function submmitReservationForm(postForm) {
 	//時間戳記
