@@ -17,7 +17,7 @@
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 60%;
+	width: 150px;
 }
 .hideLoading {
 	opacity: 0;
@@ -25,12 +25,6 @@
 }
 .hide {
 	display: none;
-}
-@media screen and (min-width: 576px) {
-	.loading-gif {
-		width: 30%;
-		/* 置中 */
-	}
 }
 
 /* alcohomeme 風格按鈕 */
@@ -87,7 +81,7 @@
 		padding-bottom: 100px;
 	}
 	.border-text img {
-		width: 98%;
+		width: 60%;
 	}
 }
 
@@ -257,4 +251,28 @@ footer > .logo {
 }
 .modal-line.icon-line {
 	margin: 0;
+}
+.form-img {
+	width: auto;
+	height: 190px;
+	object-position: 90px;
+	position: absolute;
+	right: 0;
+}
+@media screen and (min-width: 992px) {
+	.form-img {
+		object-position: 0;
+	}
+	.modal-dialog {
+    max-width: 900px;
+	}
+	.modal-header {
+		padding-top: 60px;
+		padding-left: 47px;
+	}
+	.modal-body {
+		padding-left: 145px;
+		padding-right: 145px;
+	}
+
 }
