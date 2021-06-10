@@ -1,5 +1,5 @@
 /**********************************************************
-	loading
+	loading and set fb link to open iOSApp / AndroidApp / webpage
 **********************************************************/
 window.addEventListener('load', (event) => {
 	setTimeout(() => {
@@ -8,9 +8,47 @@ window.addEventListener('load', (event) => {
 		loading.style.zIndex = -1;
 		var main = document.querySelector('main');
 		main.classList.remove('hide');
-	}, 1800);
-	// }, 100);
+		
+		// 依 user 裝置不同，對應不同開啟 FB 連結的 url
+		setFBLink();
+	// }, 1800);
+	}, 100);
 });
+
+function getOperatingSystem() {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+	if (/android/i.test(userAgent)) {
+		return 'android';
+	}
+	else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+		return 'iOS';
+	}
+	else {
+		return 'webpage';
+	}
+}
+function setFBLink() {
+	const fbId = '103737408390721';
+	const fbLink = {
+		iOSApp: `fb://page/?id=${fbId}`,
+		androidApp: `fb://page/${fbId}`,
+		webpage: `https://www.facebook.com/alcohometw/`
+	}
+	switch (getOperatingSystem()) {
+		case 'android':
+			document.querySelector('.icon-fb').href = fbLink.androidApp;
+			break;
+		case 'iOS':
+			document.querySelector('.icon-fb').href = fbLink.iOSApp;
+			break;
+		case 'webpage':
+			document.querySelector('.icon-fb').href = fbLink.webpage;
+		default:
+			break;
+	}
+
+}
+
 
 /**********************************************************
 	Form submit

@@ -158,15 +158,36 @@ footer > .logo {
 	text-align: center;
 	margin: 0 auto;
 }
+.company-social-media {
+	text-align: center;
+}
+.company-social-media > a {
+	display: inline-block;
+	margin: 0 10px;
+	color: #141414;
+}
+@media screen and (min-width: 768px) {
+	.company-social-media {
+		text-align: left;
+	}
+}
 .icon-line {
-	display: block;
-	margin: 0 auto;
 	width: 50px;
 	height: 50px;
 }
 .icon-line img {
 	width: 100%;
 	color: #fff;
+}
+.icon-fb {
+	font-size: 18px;
+	font-weight: 600;
+	padding: 2px 8px;
+	border-radius: 4px;
+	background-color: #fff;
+}
+.icon-fb:active {
+	color: #141414;
 }
 .footer-nav {
 	display: flex;
