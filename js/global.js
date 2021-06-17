@@ -4,15 +4,18 @@
 window.addEventListener('load', (event) => {
 	setTimeout(() => {
 		var loading = document.querySelector('.loading-container');
-		loading.classList.add('hideLoading');
-		loading.style.zIndex = -1;
-		var main = document.querySelector('main');
-		main.classList.remove('hide');
+		if(loading) {
+			loading.classList.add('hideLoading');
+			loading.style.zIndex = -1;
+			var main = document.querySelector('main');
+			main.classList.remove('hide');
+		}
 		
 		// 依 user 裝置不同，對應不同開啟 FB 連結的 url
 		setFBLink();
-	// }, 1800);
-	}, 100);
+
+	}, 1800);
+	// }, 100);
 });
 
 function getOperatingSystem() {
