@@ -94,7 +94,7 @@ function submmitReservationForm(postForm) {
 		return i;
 	}
 
-	const url = "https://script.google.com/macros/s/AKfycbzNTRqUFN00-Y_zzX1bDaBs6_GDjPj6T80GFVKwvjn6-BKMXmPg1yshoihAfw0ucnMW/exec"
+	const url = "https://script.google.com/macros/s/AKfycbyD_3ELYFVlMlKFp-VB0CSvPYM9_fpZNqAVA1Y8Tq4mLY3AxaSRJ7LkCJLmy-Vty-7y/exec"
 	$.get(url, {
 		...postForm,
 		'timeStamp': timeStamp
