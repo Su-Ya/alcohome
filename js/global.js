@@ -62,19 +62,17 @@ function verifyForm() {
 		name: form.name.value,
 		phone: form.phone.value,
 		email: form.email.value,
-		contents: form.contents.value
+		contents: form.contents.value,
+		companyName: form.companyName.value,
+		taxIdNumber: form.taxIdNumber.value,
 	}
-	const hasEmpty = Object.keys(postForm).some(key => postForm[key] == null || postForm[key] === "")
+	const hasEmpty = Object.keys(postForm)
+	.some(key => postForm[key] == null || postForm[key] === "")
 	if( hasEmpty ) {
 		alert('必填欄位不能為空');
 		return;
 	}
-	submmitReservationForm({
-		...postForm,
-		// 下面是非必填欄位，不用檢查空值
-		companyName: form.companyName.value,
-		taxIdNumber: form.taxIdNumber.value,
-	});
+	submmitReservationForm(postForm);
 }
 function submmitReservationForm(postForm) {
 	//時間戳記
